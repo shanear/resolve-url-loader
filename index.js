@@ -71,7 +71,7 @@ module.exports = function loader(content, sourceMap) {
     var location = value
       .replace(/^\//, '')             // no leading slash
       .replace(/\b\/+\b/g, '/');      // remove duplicate slashes
-    array[i] = path.resolve(filePath, location);
+    array[i] = '/' + location;
   }
 
   /**
